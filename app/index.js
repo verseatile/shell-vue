@@ -1,9 +1,16 @@
+// MAIN WEBPACK AREA
 // node x view controller space
 //import Vue or React
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App.jsx'
+import Vue from 'vue'
+import router from './router'
+import App from './App.vue'
 
 console.log('its webpack bruh')
 
-ReactDOM.render(<App />, document.getElementById('render-target'))
+// REACT DOM render equivalent
+new Vue({
+  components: { App },
+  router,
+  //store,
+  template: '<App/>',
+}).$mount('#render-target')

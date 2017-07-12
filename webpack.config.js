@@ -15,11 +15,23 @@ const config = {
     path: path.resolve(__dirname + '/dist'),
     filename: 'index_bundle.js'
   },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   module: {
     rules: [
       {
         use: 'babel-loader',
         test: /\.js$/,
+        include: [
+          path.resolve(__dirname + '/app')
+        ]
+      },
+      {
+        use: 'vue-loader',
+        test: /\.vue$/,
         include: [
           path.resolve(__dirname + '/app')
         ]
