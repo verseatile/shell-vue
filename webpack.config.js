@@ -3,6 +3,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './index.html',
   filename: 'index.html',
@@ -17,7 +22,8 @@ const config = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': resolve('./app')
     }
   },
   module: {

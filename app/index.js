@@ -2,15 +2,17 @@
 // node x view controller space
 //import Vue or React
 import Vue from 'vue'
-import router from './router'
+import router from './router/index.js'
 import App from './App.vue'
 
 console.log('its webpack bruh')
 
+Vue.config.productionTip = false
+
 // REACT DOM render equivalent
-new Vue({
-  components: { App },
+const vm = new Vue({
+  components: {App},
   router,
+  template: '<App />'
   //store,
-  template: '<App/>',
 }).$mount('#render-target')

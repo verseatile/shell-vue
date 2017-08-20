@@ -32,7 +32,7 @@
   import SystemInformation from './Land/SystemInformation.vue'
 
   export default {
-    name: 'landing-page',
+    name: 'Land',
     components: { SystemInformation },
     methods: {
       open (link) {
