@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 
 function resolve (dir) {
@@ -51,7 +52,7 @@ const config = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig],
+  plugins: [HtmlWebpackPluginConfig, new VueLoaderPlugin()],
   devServer: {
     contentBase: path.join(__dirname, "app"),
     compress: true,
