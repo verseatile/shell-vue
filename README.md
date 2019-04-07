@@ -1,1 +1,2 @@
-The best webpack config so far, real talk
+# Shell-Vue
+Vue.js template with routing
